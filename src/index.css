@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark theme (default) — values are "R G B" channels, no commas */
+  --c-base-950: 8 9 11;
+  --c-base-900: 14 15 19;
+  --c-base-850: 18 19 23;
+  --c-base-800: 23 24 29;
+  --c-base-700: 35 36 41;
+  --c-base-600: 58 59 66;
+
+  --c-ink-100: 245 245 247;
+  --c-ink-300: 199 200 206;
+  --c-ink-500: 139 141 147;
+  --c-ink-700: 85 86 92;
+
+  --c-signal-green: 29 185 84;
+  --c-signal-greendim: 15 107 49;
+  --c-signal-red: 225 29 46;
+  --c-signal-amber: 245 165 36;
+}
+
+[data-theme='light'] {
+  --c-base-950: 250 250 251;
+  --c-base-900: 255 255 255;
+  --c-base-850: 255 255 255;
+  --c-base-800: 243 244 246;
+  --c-base-700: 224 226 230;
+  --c-base-600: 196 200 207;
+
+  --c-ink-100: 17 24 28;
+  --c-ink-300: 60 66 74;
+  --c-ink-500: 107 114 128;
+  --c-ink-700: 156 163 175;
+
+  --c-signal-green: 21 156 70;
+  --c-signal-greendim: 15 107 49;
+  --c-signal-red: 220 38 38;
+  --c-signal-amber: 217 119 6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--c-base-900));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--c-base-700));
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
