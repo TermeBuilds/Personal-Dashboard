@@ -47,6 +47,7 @@ flowchart TD
 
     UI --> Charts[Recharts Analytics]
     UI --> PWA[PWA]
+```
 
 The application follows a component-based React architecture with centralized state management through Redux Toolkit.
 
